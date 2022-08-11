@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_height="480dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/background_productdetail"
+    android:elevation="30dp"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="CANADA DRY"
+            android:textSize="30sp"
+            tools:text="Product Name"
+             />
+
+        <TextView
+            android:id="@+id/product_date_left"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/date_left"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="57 DAYS LEFT"
+            tools:text="days left" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="61dp"
+        android:text="SODA DRINKS"
+        android:layout_marginStart="10dp"
+        tools:text="This product is tagged as xxx"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:id="@+id/product_photo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/product_tag"
+        app:srcCompat="@drawable/ic_dashboard_black_24dp"
+        tools:ignore="VectorDrawableCompat"
+        android:layout_alignParentLeft="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/product_photo">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/product_date_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_photo"
+                android:text="TextView"/>
+            <EditText
+                android:id="@+id/editExpire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_photo"
+                android:ems="10"
+                android:hint="Type to update Expir date"
+                android:inputType="date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/product_date_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editExpire"
+                android:text="TextView" />
+            <EditText
+                android:id="@+id/editOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editExpire"
+                android:ems="10"
+                android:hint="Type to update Open date"
+                android:inputType="date" />
+            <CheckBox android:id="@+id/checkbox_meat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opened"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/product_date_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editOpen"
+                android:layout_marginTop="1dp"
+                android:text="TextView" />
+
+
+            <EditText
+                android:id="@+id/editStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editOpen"
+                android:hint="Type to update Period"
+                android:ems="10"
+                android:inputType="datetime" />
+
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/editStart"
+                android:text="Update" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

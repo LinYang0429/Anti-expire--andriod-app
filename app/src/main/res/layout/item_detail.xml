@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id = "@+id/item_detail"
+>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Brand Name: " />
+
+
+            <EditText
+                android:id="@+id/bradName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Type to Brand Name"
+                android:ems="10"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Product Name: " />
+
+
+            <EditText
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Type to Product Name"
+                android:ems="10"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Expire Date: " />
+
+
+            <EditText
+                android:id="@+id/expireDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Type to Expire Date"
+                android:ems="10"
+                android:inputType="date"
+                android:focusable="false"
+                android:enabled="true"/>
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/open_switch"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Opened" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id = "@+id/product_date_open">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Open Date: " />
+
+            <EditText
+                android:id="@+id/openDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Type to Expire Date"
+                android:ems="10"
+                android:inputType="date"
+                android:focusable="false"
+                android:enabled="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Period After Open: " />
+
+            <EditText
+                android:id="@+id/period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Type to Expire Date"
+                android:ems="10"
+                android:inputType="date" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/used_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorAccent"
+                android:textColor="@color/textColorPrimary"
+                android:text="USED UP" />
+
+            <Button
+                android:id="@+id/throw_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_toStartOf="@id/used_button"
+                android:layout_toLeftOf="@id/used_button"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/textColorPrimary"
+                android:text="THROW AWAY" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
